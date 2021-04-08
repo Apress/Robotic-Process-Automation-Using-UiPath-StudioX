@@ -1,0 +1,50 @@
+{
+  "name": "Chapter_3-InputDialogExercise",
+  "description": "Exercise to showcase Input Dialog activity",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.ComplexScenarios.Activities": "[1.1.3-beta.1141506]",
+    "UiPath.Excel.Activities": "[2.9.3-beta.1162882]",
+    "UiPath.Mail.Activities": "[1.9.3-beta.1159742]",
+    "UiPath.Presentations.Activities": "[0.1.3-beta.1162525]",
+    "UiPath.System.Activities": "[20.10.1-beta.1162306]",
+    "UiPath.UIAutomation.Activities": "[20.10.2-preview]",
+    "UiPath.Word.Activities": "[1.5.3-beta.1159735]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.10.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalHandlerX.xaml",
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Business",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
+}

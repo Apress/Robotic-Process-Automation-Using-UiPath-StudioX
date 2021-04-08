@@ -1,0 +1,529 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1225.6,4647.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="677.6,4582.4" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;C:\BookSamples\InvoiceGenerationAutomation\Templates\CustomNotebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="CustomNotebook" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Initialization activites to create folder structure and files required for the automation." DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="634.4,88" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:FolderExistsX sap2010:Annotation.AnnotationText="Check if the DailyProcessing\Current Date (YYYYMMDD) folder already exists. This folder will be used by the automation for storing all files required for processing, and all output files (invoices)." DisplayName="Check Folder Structure Exists" Exists="[Saved.Values(Of Boolean)(&quot;CurrentDateFolderExists&quot;)]" sap:VirtualizedContainerService.HintSize="828,132.8" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B9&quot;)]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:FolderExistsX>
+      <If sap2010:Annotation.AnnotationText="If the DailyProcessing\Current Date (YYYYMMDD) folder already exists, then delete the existing folder and all its contents, and recreate the folder, else just create a new folder." Condition="[Saved.Values(Of Boolean)(&quot;CurrentDateFolderExists&quot;) = true]" DisplayName="Create Folder Structure" sap:VirtualizedContainerService.HintSize="828,448" sap2010:WorkflowViewState.IdRef="If_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="405.6,289.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:DeleteFolderX sap2010:Annotation.AnnotationText="Delete DailyProcessing\Current Date (YYYYMMDD) and its all contents." DisplayName="Delete Current Date Folder &amp; Contents" sap:VirtualizedContainerService.HintSize="362.4,79.2" sap2010:WorkflowViewState.IdRef="DeleteFolderX_1" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B9&quot;)]" Recursive="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:DeleteFolderX>
+            <ui:CreateDirectory ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Create a new DailyProcessing\Current Date (YYYYMMDD) folder." DisplayName="Create Current Date Folder" sap:VirtualizedContainerService.HintSize="362.4,79.2" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B9&quot;)]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CreateDirectory>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,170.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CreateDirectory ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Create a new DailyProcessing\Current Date (YYYYMMDD) folder." DisplayName="Create Current Date Folder" sap:VirtualizedContainerService.HintSize="356.8,79.2" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B9&quot;)]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CreateDirectory>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Create a copy of Templates\OrdersList.xlsx file in the DailyProcessing\Current Date (YYYYMMDD) folder. This file is used by the automation for storing list of orders that are pending invoice generation." Destination="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B10&quot;)]" DisplayName="Create Orders List Excel Copy" sap:VirtualizedContainerService.HintSize="828,158.4" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B5&quot;)]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CopyFile>
+    </Sequence>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Generate invoices for all orders extracted from the Order Management System." AttachMode="ByInstance" DisplayName="Generate Invoices" sap:VirtualizedContainerService.HintSize="634.4,4363.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="622.4,4067.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="579.2,197.6" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
+              <ui:GetActiveWindow.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,114.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="356.8,23.2" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:GetActiveWindow.Body>
+            </ui:GetActiveWindow>
+            <ueab:ExcelApplicationCard Password="{x:Null}" sap2010:Annotation.AnnotationText="Extract list of orders from the home screen of the Order Management System and store the extracted list in an Excel (OrdersList.xlsx). Go over this list one by one, fetch order details and generate invoice for each order." CreateNewFile="False" DisplayName="Extract &amp; Process All Orders" sap:VirtualizedContainerService.HintSize="579.2,3737.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" TemplatePath="C:\BookSamples\InvoiceGenerationAutomation\Templates\OrdersList.xlsx" UseTemplate="True" WorkbookPath="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B10&quot;)]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="OrdersList" />
+                  </ActivityAction.Argument>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="567.2,3475.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NSelectItem sap2010:Annotation.AnnotationText="Filter orders that have pending invoices." DisplayName="Filter Orders w/ Pending Invoices" sap:VirtualizedContainerService.HintSize="524,165.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Pending">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="3">
+                          <x:String>Pending</x:String>
+                          <x:String>Processed</x:String>
+                          <x:String>All</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="151, 173, 294, 31" ElementType="DropDown" FriendlyName="'Orders Orders'" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='InvoiceStatusFilterComboBox' /&gt;&lt;ctrl name='Orders' role='combo box' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='InvoiceStatusFilterComboBox' /&gt;&lt;ctrl name='Orders' role='combo box' automationid='' /&gt;" ImageBase64="" InformativeScreenshot="9073742427bbe2aa561c3fb6df30d778.png" ScopeSelectorArgument="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrders' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Orders&#xA;Orders&#xA;Open&#xA;Pending&#xA;Processed&#xA;All" TextMethod="FullTextScrapping" TextSelector="&lt;ctrl role='combo box' /&gt;">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="24, 173, 113, 19" ElementType="Text" FriendlyName="'Invoice Status'" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='label2' /&gt;&lt;ctrl name='Invoice Status' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='label2' /&gt;&lt;ctrl name='Invoice Status' role='text' automationid='' check:text='Invoice Status' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAXCAYAAAA1OADtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAt+SURBVGhD7ZjpU5RXFsbnw3zJh5lUqjJZqJkak5lMUpooGYSRqCGbWcREXFBINBARQUhQ2XeQptlkFQVpcEEEZVNCE1kabEBMAyqLQDeLQNOsAi39H/zmtqKTkI6pGGcyofzwVHXdfu6597zPe59z7vs7g8HAPUxMTDA8PIxer78/9hi/PTwWdRHisaiLEI9FXYR4OFHnbmPQTzA+NsbQ0AS3Zm9z2xRvMeD2NLNTOob6NPT29NCjVtPT389N3TgTtwzcnjMx51fGw4k6q8PQX8I52Ql8Akto7NUxaoq3GDCqoleRRKDdB6y3tMRyzRosHRzwSDpHyWUDukkTc35lPJyo00MYurNIj4rFzj6Lis4hhk3xHjX0U+Iht6BSNlBY3EKPboopU7xHghkBNR1fy8j12o27swe7XDzx/Modz4CduH0pxc9PjvLqJSp/7n6m+tD1NFBc2IBS1XfnQOgXcn4BfluizmgxaPI4kZzOLrc8FN1aRkzxHgXmxsRLJKcgyIfdr+wkpuwG9SNi/N4eAqLYYe1LbpkE35/7HIYVdFbEYm8XS1S6gm4xNr2Q8wvw2xJ1blasPchAbx/X2gYZvTXLrCneo8CsEK//JMcio7Bfn0Bh8wCaWTF+bw+d3Vy91MTNq+kcWnSibkmjoqmSi8pq8k6Voig9RZ4sDak0XiALWbEKhXqG8RlhZYpK5EeLudSpo29KxLlnp/JqCjIVtAyNMyKsabynEkVhCrI0KdL4RKRZhRSrOlAL/sxC+50aEfwmwT98l39/XaVYd1SsK3L5kZh5yg5aRg1M6RfkZ4RenFStnPyEIFw//oLDRQqUnSOMCr7+Dl+sPdxMS/Zu9m+15VULJ3bHlVJktNOZcfRqBapiGVlSKfECUmkaiYcLKWzqofp8BgWBtlib2/Lh5zFIhQ23CTtWLrRxE+VmpE9FZ2UWR1OMeYqYKSJmZQ8dfYI7v/dfLqp42yrEWxcVcYB333DA32k9n7xtjtnzSzB72pLVDqn4ltykW6egKOwAXy61I/jsdSoHbjN3axD99TSS3X14//VwjreouaYpp63QHf/tL7N2xXOYLXmJZ63t2J56mrODvYx0Zs47xDFxMgbo0zTSdi4K/62vsvY1wTd7AbNn17B2eyT+BVdoGxoTgn5De+FXBH+2DBtzM8xefBkzGwc2RJ0h7dsJ+idNde/GmqqhIdubQ5uW8mVQLMnHa6ir09Ap1h0c0aDp+JpTu8zZ8I8neeKpl3jaJhTf4w1oJvqZqZNyfM863jEz40UBs+de46XXtmEXewE/bw8C1zzJX556kj++sgkr5zTKq+KJXnjiv+eImWK8l+aKw+S7W2K+dAnPGGO+bI+dewmnK/runPY5gUcn6lcu2Px9M85RMvFWy1GUF6FIdiPMIwRHzyJqe9RUHfcncftytiVUkHN5lNmRbvoLdnPgwAHM95yhrvsa9WeCOfLFSjxiE0gqKOXihQLyD27FJSSMD5OE4A2p80keEUk2c/FMOEd2rsZjfyJJx4RTXKxAkX+MJBdfPN77iiNV9ZzITCFrz2dEnzhLjlyBoqoMxYU4DkYl43yghEtqU937nMA0Y22VtOSGkuTryDbbd1mxYg0rV4ruV3qGc+1dtMvDOei5lzffCyWx5FuaBsaY1s8wN9rDQNsVrigU1AkoSo9RkB7C1s/TiAiPJD9jL+++tRfXwFxKmq9y8/pRUh4oaqoYLycvNp6QVW5IThVxyhgzwZ+tKwMJi63gspgzKfDoRPXZzzqr/RwsUVE/OIlhcgDD5VjSA0Pvb/RafQZfx29ko2c2h4qa6ettojJkC37BkXx64go3uuQUHfLDc+N24r9uvBNHP6ZBK/chODiYN1yOoaxKuFvDtiQL2z9HlpFvK/inBL9LrKufFrbZQXOesNeQFMrrzpHovwenV83Z6OrH3rAYYiShxPjbs/mj7VjZhJBR30u7sRyYynVykImuSyiL0kmVBuHmupudmz5hi6cU14wqmi+n/bCmGm1zrIUOZRmFMhlJCQnEhO3Fb6895m+F4S/4xmdmfHZ3aqp4ntP3xXuwqKeiA/Fa/gG7YhOJK5BxNvcYUXtPkJvfTIeYYzytj07UB25ofnxEyY2qRHbaHUSSdpqatgsk2G8jJjqTk+J/bftPJPbdtX5s3e/i3ly3jzD//R94/pnneMZohffxT5Zb7yFc3k2DsbNdON8EZib60NRF4HXAj2W2EorkMUR+bw+z6Cc1jApHOR22C4c1Nrz8wovCfv/Es3/+G0+87oOH4P98UY3OdIUy4Xbh619g+QdrsHHdj3eiqKkXRE3tnvov2O8DNzQ/PqthoLWI+K07iInZT4IijW2bgpGklPPt2BBTN34isYcWVVjdX3cSIDvLyZoaau6jHmXDdbq0txgzdrYL55vAnF7H9KhwCP+D7HjNi9zSqAVXmh4GO86SvnEHEc7BxGWep0xeSU1JGrnJXrzzYRShgv/zRb1bU7sGOulqEPfjskxyEvZzwMmRNauC8EupoknMebT2+8AN3RufZEzTgNxnM1Lvj9kh2cebu7KJz7+KVnSbemO3GS+6TTtXDlc2oxqZQj/ey1hNCJGhYbzpdIQ6Yb/xxpibE6loyOWIkf+x4As7Vxk7QFHPDMKyOyqqkB8+ibIxn2QfL3at3ExUfhN1dzh37VGlbKSwpAW1iY8G+ikdYy0lVFSXcVTRwo3xuxz9zLDIQZQPv3A2WPlx5oKEwO/leJ3eZhmBrzjiszOdrMtahib1TLXLqZcFYbM++of2qx9hWltATngMn9okcLx+4E450E8NMKYS5SY4XMS/e1KVCmNe+SKvRhSVueTGe2O3wh7P0JMUjhnQic78fyyqsC/tDTQndxLt9Ab/esuOtRFVZCpHRNx73aY4wfbLcE/JJrtGtO+qWuqSHHALCGJ1ZLG4GybPx5y3I9GdJtgtx90vh+wiFerOa6hFHc129cbd4nMSyms4nLiAc6MZdUMaCVGHcHA5TbWJjxgz2m40p13wDtrFct8kchpVqNRqOq81UnfOF1fvICxE01NeI2pbdBRbNiWQp2inQ1xBulvzOWjphZ9LNkl1alSdalqLsjjh7cKSdyJxi47nYlUc2+1CCIkpob6/D+1sDUURsXgt249/dgNnxdXoxnUVV4r9CP3SR+QreojOYo5HBLBvmT0h2bXi+iT2VJtPksOnxMVlc1pjQDvzK4g6J96+6W/jSXG15+2lW/E41Uq5Rlzo73eb52jKccLXeRW271pgaf025us8cEssprS9E11bxnzMeTtqu0hTtj++jmuxtbHAynI1VuYbsHUMx/eo+E8zRG/rAo6oc1ZbnNkWlUtc5U16xn/4EWNudpzpm+L+nROMv+M61q61xsLKCsvVazHf4IhjeA5HL7ajGSrhfMoX7LVawRuiUfRLL6Om7yoXI/yJ2GDLOnMrrC2t+MBmNevXbeBJ6xDcUo6ibE0ieqslm63seH9bGnmdHVSVpJLj9CarVq1iqYUt77zljJebM9u3GEXNEPl20liSTZ7TJj5bJWqqhQXWb7/HOo9MUs+3cXPawOzcw4qqnxAdppJa+TdkZIg7YPs3yI2/ZUrahyfu+Pr3OKbG806SGibjfOswXd/9KD7Zha69kNKMAKRBHnjsC8BDIjrZ2i5h0RPCohfEFN2prr1a8IPv8j32CUiQyuSUdmjRTYtcFnL2iWZFIh6EvBmlVuRt6uODwfgMtAw2y6nOlBDsY4z7n7kyMbdDOy2uLx101coolPgQsE+MlzZzfUJHv7IUeaoUiZizTyAoKAhJXCr74s6LXJSoh6uplQWTGiQlOLKU6j4dXV21tBZKCAswrhWEj08imZk5HDlSdD/fwa5mcefOJCPAhyBj7IAwJIWt1Bo7//m9P5yoj/F/jceiLkI8FnUR4rGoiw4G/g00ZQIS/OBG+gAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" Text="Invoice Status" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSelectItem.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NSelectItem>
+                    <uix:NExtractData sap2010:Annotation.AnnotationText="Extract list of orders from the table on home screen of Order Management System and store it in Excel (OrdersList.xlsx)." AppendResults="False" ContinueOnError="True" DataTable="[OrdersList.Sheet(&quot;Summary&quot;).DataTableOutValue]" DisplayName="Extract Orders Table Data" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="524,165.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="100">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="28, 262, 1331, 551" ElementType="Table" FriendlyName="'table  DataGridView'" FullSelectorArgument="&lt;wnd ctrlname='groupBox2' /&gt;&lt;wnd ctrlname='OrdersGrid' /&gt;&lt;ctrl name='DataGridView' role='table' /&gt;" InformativeScreenshot="ea8849a4e4ca2e144afa1593449fe8b2.png" ScopeSelectorArgument="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrders' /&gt;" SearchSteps="Selector" />
+                      </uix:NExtractData.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NExtractData>
+                    <ueab:ExcelForEachRow sap2010:Annotation.AnnotationText="Process each order in the OrdersList.xlsx Excel one by one." DisplayName="Process All Purchase Orders" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="524,2971.2" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[OrdersList.Sheet(&quot;Summary&quot;)]" SaveAfterEachRow="True">
+                      <ueab:ExcelForEachRow.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentOrder" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2781.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:WriteCellX sap2010:Annotation.AnnotationText="Enter current Order Number in the Project Notebook &gt; Scratchpad. This information is used to generate invoice number and actual file names/paths." Cell="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B3&quot;)]" DisplayName="Generate Invoice Number" sap:VirtualizedContainerService.HintSize="468.8,163.2" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CurrentOrder.ByField(&quot;Order Number&quot;)]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:WriteCellX>
+                            <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Create a copy of Templates\OrderDetails.xlsx file in the DailyProcessing\Current Date (YYYYMMDD) folder. This will be used for temporarily storing order details data." Destination="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B11&quot;)]" DisplayName="Create Order Details Excel Copy" sap:VirtualizedContainerService.HintSize="468.8,158.4" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="False" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B6&quot;)]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CopyFile>
+                            <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Create a copy of Templates\InvoiceTemplate.docx file in the DailyProcessing\Current Date (YYYYMMDD) folder." Destination="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B12&quot;)]" DisplayName="Create Invoice Template Copy" sap:VirtualizedContainerService.HintSize="468.8,158.4" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="False" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B7&quot;)]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CopyFile>
+                            <ueab:ExcelApplicationCard Password="{x:Null}" sap2010:Annotation.AnnotationText="Extract Order Details data from the Order Management System, and store the extracted data in a temporary Excel. Use data stored in Excel to generate invoices in Word and PDF formats." CreateNewFile="False" DisplayName="Extract Order Details &amp; Generate Invoice" sap:VirtualizedContainerService.HintSize="468.8,1969.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" TemplatePath="C:\BookSamples\InvoiceGenerationAutomation\Templates\OrderDetails.xlsx" UseTemplate="True" WorkbookPath="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B11&quot;)]">
+                              <ueab:ExcelApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="OrderDetails" />
+                                  </ActivityAction.Argument>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="456.8,1707.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Type current Order Number from Excel in the search field." ClickBeforeMode="Single" DisplayName="Type Into Search Field" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="413.6,226.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[CurrentOrder.ByField(&quot;Order Number&quot;)]">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="1022, 64, 201, 35" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='SearchTextBox' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SearchTextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAM0AAAAnCAYAAACsY8yNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE/SURBVHhe7dOxSoJhGIbhxk6gQwgilw6ruakhQmgMCScPI4RaAsm5LXAQQxfBUiOElpre+EwIKeN/Z68LnuE5gHtnsViEmVWfaMySW0YznLzFw/DVzDasNLIWTeN+EoeNJzPbsNLIWjSnN+PYuxjE8fVznN/NzWy10kRpozTyK5ra1Sh6Lx8B/ChNlDZEAxVVjmY2m0Wr1Yput7v8sK0qR9Pr9aJWq0W9Xl9+2FaigSTRQJJoIEk0kCQaSBINJIkGkkQDSaKBJNFAkmggSTSQJBpIEg0kiQaSRANJooEk0UCSaCBJNJAkGkgSDSRVjmY6nUaz2YxOp7P8sK0qRwN8Ew0kiQaS/o1m/3IYt/33GMw/zWy10kRp489ods/6cdAYxlFzZGarlSZKG7+iaT9O46Q9NrMNK42sRWNmVbeIL+ndxHTbLx3wAAAAAElFTkSuQmCC" InformativeScreenshot="2b9d31a5bef602cb06dd75cbe4e27321.png" ScopeSelectorArgument="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrders' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="1229, 64, 143, 29" ElementType="Button" FriendlyName="'Search Order'" FullSelectorArgument="&lt;wnd ctrlname='SearchPOButton' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SearchPOButton' check:text='Search Order' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" Text="Search Order" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NClick sap2010:Annotation.AnnotationText="Click on Search Order button to search the entered Order Number and open the order details screen." ClickType="Single" DisplayName="Click Search Order Button" sap:VirtualizedContainerService.HintSize="413.6,165.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="1229, 64, 143, 29" ElementType="Button" FriendlyName="'Search Order'" FullSelectorArgument="&lt;wnd ctrlname='SearchPOButton' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SearchPOButton' check:text='Search Order' /&gt;" ImageBase64="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" InformativeScreenshot="3818aacb8804161cccabfa5c1186b1da.png" ScopeSelectorArgument="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrders' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Search Order" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="1022, 64, 201, 35" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='SearchTextBox' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SearchTextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAM0AAAAnCAYAAACsY8yNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEOSURBVHhe7dOhSoNhGIZhoyfgIQiixcMymwxiMcoQj0QGWix2m2AYyr8ymMpEfrBoeuWTgYw52dOvC+5DuDf6vi9J62caKexnmm76Xnfdm6QVtUcWphncTmt38CRpRe2RhWmOria1dfpYB5fPdXIzkzSvPdHeaI8sTbN3Pq6Hl88CfrUn2humgTWZBkKmgZBpIGQaCJkGQqaBkGkgZBoImQZCpoGQaSBkGgiZBkKmgZBpIGQaCJkGQqaBkGkgZBoImQZCpoGQaSBkGgiZBkKmgZBpIGQaCP07zfZZV9ejj3qcfUma155ob/w5zebxqHYGXe1fjCXNa0+0N5amGd6/1uFwImlF7ZGFaSStW1/fzrUv/3HH8rUAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="413.6,403.2" sap2010:WorkflowViewState.IdRef="GetActiveWindow_2">
+                                      <ui:GetActiveWindow.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,320" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="356.8,23.2" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                                            <uix:NExtractData sap2010:Annotation.AnnotationText="Extract order details data from the table and store value in Excel." AppendResults="False" ContinueOnError="True" DataTable="[OrderDetails.Sheet(&quot;Line Items&quot;).DataTableOutValue]" DisplayName="Extract Order Details Table Data" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="356.8,165.6" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="100">
+                                              <uix:NExtractData.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="28, 386, 1331, 430" ElementType="Table" FriendlyName="'table  DataGridView'" FullSelectorArgument="&lt;wnd ctrlname='groupBox2' /&gt;&lt;wnd ctrlname='ProductDataGrid' /&gt;&lt;ctrl name='DataGridView' role='table' /&gt;" InformativeScreenshot="0c5e60488cbe5aa9a628a98d2c344c0e.png" ScopeSelectorArgument="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrderDetails' /&gt;" SearchSteps="Selector" />
+                                              </uix:NExtractData.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NExtractData>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:GetActiveWindow.Body>
+                                    </ui:GetActiveWindow>
+                                    <ueab:DeleteColumnX sap2010:Annotation.AnnotationText="Table data extracted from Order Details screen adds an extra column (Top Left Header Cell) at the beginning. This column is not needed in the invoice, so automation needs to delete it." ColumnName="Top Left Header Cell" DisplayName="Delete Extra Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="413.6,160" sap2010:WorkflowViewState.IdRef="DeleteColumnX_1" Range="[OrderDetails.Sheet(&quot;Line Items&quot;)]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ueab:DeleteColumnX>
+                                    <p:WordApplicationScope sap2010:Annotation.AnnotationText="Generate invoice by replacing placeholders in template with actual order summary and details data extracted from the Order Management System." CreateNewFile="False" DisplayName="Generate Invoice for Current Order" FilePath="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B12&quot;)]" sap:VirtualizedContainerService.HintSize="413.6,86.4" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+                                      <p:WordApplicationScope.Body>
+                                        <ActivityAction x:TypeArguments="ui:WordDocument">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="455.2,1784" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <p:WordReplaceText Found="{x:Null}" sap2010:Annotation.AnnotationText="Replace the &lt;INVOICENO&gt; placeholder in invoice template with the actual Invoice Number generated using the custom formula." DisplayName="Enter Invoice Number" sap:VirtualizedContainerService.HintSize="412,163.2" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B4&quot;)]" ReplaceAll="True" Search="&lt;INVOICENO&gt;">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordReplaceText>
+                                            <p:WordReplaceText Found="{x:Null}" sap2010:Annotation.AnnotationText="Replace the &lt;DATE&gt; placeholder in invoice template with the date invoice is generated." DisplayName="Enter Invoice Date" sap:VirtualizedContainerService.HintSize="412,166.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B2&quot;)]" ReplaceAll="True" Search="&lt;DATE&gt;">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordReplaceText>
+                                            <p:WordReplaceText Found="{x:Null}" sap2010:Annotation.AnnotationText="Replace the &lt;CUSTOMER&gt; placeholder in invoice template with the actual Customer value from CurrentOrder." DisplayName="Enter Customer" sap:VirtualizedContainerService.HintSize="412,166.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[CurrentOrder.ByField(&quot;Customer&quot;)]" ReplaceAll="True" Search="&lt;CUSTOMER&gt;">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordReplaceText>
+                                            <p:WordReplaceText Found="{x:Null}" sap2010:Annotation.AnnotationText="Replace the &lt;CUSTOMERCONTACT&gt; placeholder in invoice template with the actual Customer Contact value from CurrentOrder." DisplayName="Enter Customer Contact" sap:VirtualizedContainerService.HintSize="412,166.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[CurrentOrder.ByField(&quot;Contact&quot;)]" ReplaceAll="True" Search="&lt;CUSTOMERCONTACT&gt;">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordReplaceText>
+                                            <p:WordReplaceText Found="{x:Null}" sap2010:Annotation.AnnotationText="Replace the &lt;SHIPTOADDRESS&gt; placeholder in invoice template with the actual Ship To Address value from CurrentOrder." DisplayName="Enter Ship To Address" sap:VirtualizedContainerService.HintSize="412,166.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[CurrentOrder.ByField(&quot;Address&quot;)]" ReplaceAll="True" Search="&lt;SHIPTOADDRESS&gt;">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordReplaceText>
+                                            <p:WordReplaceText Found="{x:Null}" sap2010:Annotation.AnnotationText="Replace the &lt;TOTALAMOUNT&gt; placeholder in invoice template with the actual Total Amount value from CurrentOrder." DisplayName="Enter Total Amount" sap:VirtualizedContainerService.HintSize="412,166.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[CurrentOrder.ByField(&quot;Total Amount&quot;)]" ReplaceAll="True" Search="&lt;TOTALAMOUNT&gt;">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordReplaceText>
+                                            <p:WordInsertDataTable Bookmark="{x:Null}" sap2010:Annotation.AnnotationText="Insert the Order Details (Line Items) table extracted from the Order Management System. Automation replaces &lt;PRODUCTS&gt; text in invoice template with the data from OrderDetails." DataTable="[OrderDetails.Sheet(&quot;Line Items&quot;)]" DisplayName="Insert Order Details Table in Invoice" sap:VirtualizedContainerService.HintSize="412,304" sap2010:WorkflowViewState.IdRef="WordInsertDataTable_1" InsertRelativeTo="Text" Occurrence="First" OccurrenceIndex="[CurrentIndex]" Position="Replace" Text="&lt;PRODUCTS&gt;">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordInsertDataTable>
+                                            <p:WordExportToPdf sap2010:Annotation.AnnotationText="Export the invoice which is currently in Word format to PDF format." DisplayName="Save Document as PDF" FilePath="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B13&quot;)]" sap:VirtualizedContainerService.HintSize="412,112" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:WordExportToPdf>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </p:WordApplicationScope.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </p:WordApplicationScope>
+                                    <uix:NCheck Action="Check" sap2010:Annotation.AnnotationText="Mark invoice status as Processed in Order Management System." DisplayName="Mark Invoice As Processed" sap:VirtualizedContainerService.HintSize="413.6,165.6" sap2010:WorkflowViewState.IdRef="NCheck_1">
+                                      <uix:NCheck.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="151, 298, 127, 29" ElementType="CheckBox" FriendlyName="'Processed'" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='InvoiceStatusCheckbox' /&gt;&lt;ctrl name='Processed' role='check box' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='InvoiceStatusCheckbox' /&gt;&lt;ctrl name='Processed' role='check box' automationid='' check:fulltext='Processed' /&gt;" ImageBase64="" InformativeScreenshot="844aad64fedc40c20da46e160fa12cf8.png" ScopeSelectorArgument="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrderDetails' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Processed" TextMethod="FullTextScrapping" TextSelector="&lt;ctrl role='check box' /&gt;">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="24, 298, 113, 20" ElementType="Text" FriendlyName="'Invoice Status'" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='label10' /&gt;&lt;ctrl name='Invoice Status' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='label10' /&gt;&lt;ctrl name='Invoice Status' role='text' automationid='' check:text='Invoice Status' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" Text="Invoice Status" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NCheck.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NCheck>
+                                    <uix:NClick sap2010:Annotation.AnnotationText="Click on Save and Close button to close the Order Details screen." ClickType="Single" DisplayName="Click Save and Close Button" sap:VirtualizedContainerService.HintSize="412,167.333333333333" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="1229, 64, 143, 29" ElementType="Button" FriendlyName="'Save and Close'" FullSelectorArgument="&lt;wnd ctrlname='button1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='button1' check:text='Save and Close' /&gt;" ImageBase64="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" InformativeScreenshot="6be209bcced362dec08666f1df3f8859.png" ScopeSelectorArgument="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrderDetails' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Save and Close" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="12, 68, 163, 29" ElementType="Text" FriendlyName="'Order Details'" FullSelectorArgument="&lt;wnd ctrlname='label6' /&gt;&lt;ctrl name='Order Details' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='label6' /&gt;&lt;ctrl name='Order Details' role='text' automationid='' check:text='Order Details' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" Text="Order Details" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelApplicationCard.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:ExcelApplicationCard>
+                            <ui:DeleteFileX sap2010:Annotation.AnnotationText="Delete the current order details Excel that was created temporarily to store data." DisplayName="Delete Temporary Order Details Excel" sap:VirtualizedContainerService.HintSize="468.8,79.2" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[CustomNotebook.Sheet(&quot;Scratchpad&quot;).Cell(&quot;B11&quot;)]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:DeleteFileX>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\BookSamples\InvoiceGenerationAutomation\App\ordermanagement.exe" IconBase64="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" InformativeScreenshot="6524fda041ad24db81cf77b398a2e0dc.png" Selector="&lt;wnd app='ordermanagement.exe' ctrlname='frmViewOrders'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </ueab:SequenceX>
+</Activity>
